@@ -1,6 +1,6 @@
 import { Parent } from './parent';
 
-export interface Main {
+export interface Master {
     kind: string;
     data: Parent;
 }

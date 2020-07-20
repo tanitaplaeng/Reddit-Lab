@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RedditService } from "../reddit.service";
 import { Children } from "../models/children";
-import { Main } from "../models/main";
+import { Master } from "../models/master";
 
 @Component({
   selector: 'app-list',
@@ -9,13 +9,13 @@ import { Main } from "../models/main";
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  data: Main;
+  data: Master;
   children: Children[];
 
   constructor(private redditService: RedditService) { }
 
   ngOnInit(): void {
-    this.redditService.getPosts().subscribe((response: Main) => {
+    this.redditService.getPosts().subscribe((response: Master) => {
       this.children = response.data.children;
       console.log(this.children);
     });

@@ -8,13 +8,13 @@ import { RedditService } from '../reddit.service';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
-  @Input() result: Child;
+  @Input() post: Child;
   count = 0;
 
   constructor(private redditService: RedditService) { }
 
   ngOnInit(): void {
-    this.result.permalink=`https://www.reddit.com${this.result.permalink}`
+    this.post.permalink=`https://www.reddit.com${this.post.permalink}`
   }
 
 }
