@@ -1,0 +1,7 @@
+<div class="posts">
+    <div class="header">
+        <h1>Reddit Posts</h1>
+        <button><a href="https://www.reddit.com/"><i class="fab fa-reddit"></i></a></button>
+    </div>
+    <app-reddit-single-result *ngFor="let child of children" [result]="child.data"></app-reddit-single-result>   
+</div>
